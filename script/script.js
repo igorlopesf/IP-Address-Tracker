@@ -2,9 +2,9 @@ const apiKey =
   "https://geo.ipify.org/api/v2/country?apiKey=at_e0dZH5hz4xImdwGxy3MMFzQodjxUg&ipAddress=";
 const btnTeste = document.querySelector("#teste");
 const ip = document.querySelector("#ip");
-const pais = document.querySelector("#pais");
-const estado = document.querySelector("#estado");
-const cidade = document.querySelector("#cidade");
+const local = document.querySelector("#local");
+const time = document.querySelector("#time");
+const isp = document.querySelector("#isp");
 
 const getGeoIpData = async () => {
   const apiLink =
@@ -20,9 +20,12 @@ const showGeoIp = async () => {
   console.log(data);
 
   ip.innerText = data.ip;
-  pais.innerText = data.location.country;
+  /* pais.innerText = data.location.country;
   estado.innerText = data.location.region;
-  cidade.innerText = data.location.city;
+  cidade.innerText = data.location.city; */
+  local.innerText = `${data.location.city}, ${data.location.region} - ${data.location.country}`
+  time.innerHTML = `UTC ${data.location.timezone}`
+  isp.innerText = data.isp
 };
 
 btnTeste.addEventListener("click", function () {
@@ -31,7 +34,7 @@ btnTeste.addEventListener("click", function () {
 });
 
 const setMap = async () => {
-    
+
   const data = await getGeoIpData();
 
   // config map
