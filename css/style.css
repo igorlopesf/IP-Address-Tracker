@@ -13,14 +13,79 @@
 
 #map {
   height: 300px;
+  z-index: 0;
 }
  
 #containerInfos{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: url("../imgs/pattern-bg.png");
+    height: 230px;
+    justify-content: space-around;
 }
 #infos{
     display: flex;
     padding: 25px;  
+}
+
+#containerHeader{
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 30px;
+}
+#containerHeader input{
+  border-style: none;
+  border-radius: 10px 0px 0px 10px;
+  height: 40px;
+  width: 350px;
+}
+
+#containerHeader button{
+  border-style: none;
+  height: 40px;
+  width: 40px;
+  border-radius: 0px 10px 10px 0px;
+  background-color: var(--very_dark_gray);
+  outline: none;
+  cursor: pointer;
+}
+
+#inputGroup{
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#infos{
+  background-color: #fff;
+  border-radius: 10px;
+  position: relative;
+  top: 50px;
+  z-index: 1;
+}
+
+#info{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 80px;
+  width: 220px;
+  padding-left: 20px;
+}
+
+.lf{
+  border-right: 1px var(--dark_gray) solid;
+}
+
+#info h4{
+  color: var(--dark_gray);
+}
+
+#info label{
+  color: var(--very_dark_gray);
+  font-weight: bold;
 }

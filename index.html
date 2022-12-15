@@ -17,32 +17,34 @@
     <div id="containerInfos">
       <div id="containerHeader">
         <h1>IP Address Tracker</h1>
-        <input type="text" /><button>GO</button>
+        <div id="inputGroup">
+          <input type="text" /><button><img src="./imgs/icon-arrow.svg" alt=""></button>
+        </div>
       </div>
 
       <div id="infos">
-        <div id="info">
-          <h3>IP ADDRESS</h3>
+        <div id="info" class="lf">
+          <h4>IP ADDRESS</h3>
           <label for="" id="ip"></label>
         </div>
-        <div id="info">
-          <h3>LOCATION</h3>
+        <div id="info" class="lf">
+          <h4>LOCATION</h3>
           <label for="" id="local"></label>
         </div>
-        <div id="info">
-          <h3>TIMEZONE</h3>
+        <div id="info" class="lf">
+          <h4>TIMEZONE</h3>
           <label for="" id="time"></label>
         </div>
         <div id="info">
-          <h3>ISP</h3>
+          <h4>ISP</h3>
           <label for="" id="isp"></label>
         </div>
       </div>
     </div>
 
-    <button id="teste">Teste</button>
-
     <div id="map"></div>
+
+    <button id="teste">Teste</button>
 
     <script
       src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
